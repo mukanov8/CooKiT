@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.evan.demo.bottomnavigationdemo.R;
+
 
 
 public class DishStockFragment extends Fragment {

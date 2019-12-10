@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.evan.demo.bottomnavigationdemo.R;
+
 
 
 public class IngStockFragment extends Fragment{

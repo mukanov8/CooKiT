@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.evan.demo.bottomnavigationdemo.R;
+
 
 import java.util.ArrayList;
 

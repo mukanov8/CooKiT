@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.evan.demo.bottomnavigationdemo.R;
 import com.evan.demo.CooKiT.utils.BottomNavigationViewHelper;
 
 import java.util.ArrayList;
@@ -37,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         mFragments = new ArrayList<>();
         mFragments.add(new MenuFragment());
-        mFragments.add(new IngStockFragment());
+//        mFragments.add(new IngStockFragment());
         mFragments.add(new DishStockFragment());
-        mFragments.add(new BudgetFragment());
+//        mFragments.add(new BudgetFragment());
         // 初始化展示MessageFragment
         setFragmentPosition(0);
     }
@@ -55,15 +54,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_message:
                         setFragmentPosition(0);
                         break;
-                    case R.id.menu_contacts:
+//                    case R.id.menu_contacts:
+//                        setFragmentPosition(1);
+//                        break;
+                    case R.id.menu_discover:
                         setFragmentPosition(1);
                         break;
-                    case R.id.menu_discover:
-                        setFragmentPosition(2);
-                        break;
-                    case R.id.menu_me:
-                        setFragmentPosition(3);
-                        break;
+//                    case R.id.menu_me:
+//                        setFragmentPosition(3);
+//                        break;
                     default:
                         break;
                 }
