@@ -9,6 +9,6 @@ public class testIngredientDatabaseMethods {
     public void check_checkDish() {
         IingredientDatabase ingdata = new ingredientDatabase();
         ingdata.addIngredients("cooking", 1.0, 100.0);
-        assertThat(ingdata.checkDish("cooking", 39.0));
+        assertThat(ingdata.checkDish("cooking", 1.0)).isFalse();
     }
 }

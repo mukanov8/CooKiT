@@ -12,7 +12,7 @@ public class Ingredient implements IIngredient {
         quantity = 0.0;
     }
 
-    public Ingredient(String name, Double price, Double quantity) {
+    public Ingredient(String name, Double quantity, Double price) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;

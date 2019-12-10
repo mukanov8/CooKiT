@@ -34,9 +34,9 @@ public class Date implements IDate {
 
         // implement auto weekDay recognition
         weekDay = toStringWeekDay(Calendar.DAY_OF_WEEK);
-        this.day = Calendar.DAY_OF_MONTH;
-        this.month = Calendar.MONTH;
-        this.year = Calendar.YEAR;
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 
     public String getDateName() {
