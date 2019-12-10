@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@drawable/listview_item_selector"
-    android:gravity="center"
     android:descendantFocusability="blocksDescendants"
+    android:id="@+id/item"
     >
 
     <TextView
@@ -23,10 +22,8 @@
         android:layout_height="50dp"
         android:text="按钮"
         android:background="@drawable/btn_circle"
-
+        android:layout_alignParentRight="true"
         android:layout_gravity="center" />
 
 
-
-
-</LinearLayout>
+</RelativeLayout>
