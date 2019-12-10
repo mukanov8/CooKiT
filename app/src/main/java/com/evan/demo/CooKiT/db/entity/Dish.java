@@ -16,7 +16,7 @@ public class Dish implements IDish {
     public Dish() {
         name = "";
         totalPrice = 0.0;
-        Ingredients = null;
+        Ingredients = new ArrayList<>();
     }
 
     public Dish(String name, Double totalPrice, ArrayList<Pair<IIngredient, Double>> List) {

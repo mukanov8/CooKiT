@@ -20,7 +20,7 @@ public class Date implements IDate {
     }
 
     public Date () {
-        dishes = null;
+        dishes = new ArrayList<IDish>();
         expenditure = 0.0;
         weekDay = toStringWeekDay(Calendar.DAY_OF_WEEK);
         day = Calendar.DAY_OF_MONTH;
