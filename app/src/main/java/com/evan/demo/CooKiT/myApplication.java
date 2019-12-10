@@ -11,17 +11,15 @@ public class myApplication extends Application {
     private String editContent;
 
     public myApplication(){
-        animalList.add(new Animal("狮子"));
-        animalList.add(new Animal("老虎"));
-        animalList.add(new Animal("狗子"));
-        animalList.add(new Animal("鸡"));
-        animalList.add(new Animal("猪"));
-        animalList.add(new Animal("鱼"));
-        animalList.add(new Animal("人"));
-        animalList.add(new Animal("熊"));
-        animalList.add(new Animal("龙"));
-        animalList.add(new Animal("老鼠"));
-        animalList.add(new Animal("兔"));
+        animalList.add(new Animal("Steak"));
+        animalList.add(new Animal("Soup"));
+        animalList.add(new Animal("Chiken"));
+        animalList.add(new Animal("Eggs"));
+        animalList.add(new Animal("Pilaf"));
+        animalList.add(new Animal("Toasts"));
+        animalList.add(new Animal("Sanwitch"));
+        animalList.add(new Animal("Pizza"));
+
 
         editContent = new String("初始文字");
     }

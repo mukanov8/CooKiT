@@ -8,20 +8,22 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
 
 public class DishFragment extends Fragment implements View.OnTouchListener {
 
-    private TextView mtv;
+    private EditText met1,met2;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dish_item,null);
-        mtv = view.findViewById(R.id.dish_item_txt);
+        met1 = view.findViewById(R.id.dish_item_ingredients);
+        met2 = view.findViewById(R.id.dish_item_price);
         return view;
     }
 
@@ -29,7 +31,7 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Bundle bundle = getArguments();
-        mtv.setText(bundle.getString("name"));
+        met1.setText(bundle.getString("name"));
     }
 
     @Override
