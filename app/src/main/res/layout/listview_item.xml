@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     android:background="@drawable/listview_item_selector"
     android:gravity="center"
+    android:descendantFocusability="blocksDescendants"
     >
 
     <TextView
@@ -13,14 +14,17 @@
         android:layout_height="wrap_content"
         android:textSize="100sp"
         android:text="动物"
+
         />
 
     <Button
+        android:id="@+id/item_list_animal_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:text="按钮"
         android:background="@drawable/btn_circle"
-        android:layout_gravity="left"/>
+
+        android:layout_gravity="center" />
 
 
 

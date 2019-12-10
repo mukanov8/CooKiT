@@ -5,8 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -36,12 +37,13 @@ public class AnimalAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder holder = new ViewHolder();
 
         if(view == null){
             view = LayoutInflater.from(mcontent).inflate(R.layout.listview_item,null);
             holder.mtv = view.findViewById(R.id.item_list_animal_text);
+            holder.mbt = view.findViewById(R.id.item_list_animal_button);
             view.setTag(holder);
         }
         else{
@@ -49,10 +51,22 @@ public class AnimalAdapter extends BaseAdapter {
         }
         holder.mtv.setText(animalList.get(i).getName());
 
+        holder.mbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mcontent,"delete successful!",Toast.LENGTH_SHORT).show();
+                animalList.remove(i);
+                AnimalAdapter.this.notifyDataSetChanged();
+            }
+        });
+
+
+
         return view;
     }
 
     class ViewHolder{
         TextView mtv;
+        Button mbt;
     }
 }
