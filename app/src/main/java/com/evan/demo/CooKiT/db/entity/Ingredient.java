@@ -1,6 +1,6 @@
-package com.evan.db.entity;
+package com.evan.demo.CooKiT.db.entity;
 
-import com.evan.models.IIngredient;
+import com.evan.demo.CooKiT.models.IIngredient;
 
 public class Ingredient implements IIngredient {
     private String name;
