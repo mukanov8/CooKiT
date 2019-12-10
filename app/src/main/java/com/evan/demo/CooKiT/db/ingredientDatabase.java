@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class ingredientDatabase implements IingredientDatabase {
     private ArrayList<IIngredient> Ingredients;
     public ingredientDatabase() {
-        Ingredients = null;
+        Ingredients = new ArrayList<IIngredient> ();
     }
 
     public void addIngredients(String name, Double quantity, Double price) {

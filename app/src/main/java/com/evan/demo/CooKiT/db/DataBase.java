@@ -13,7 +13,7 @@ public class DataBase implements IDataBase {
 
     public DataBase() {
         today = new Date();
-        dates = null;
+        dates = new ArrayList<IDate>();
         dates.add(today);
     }
 

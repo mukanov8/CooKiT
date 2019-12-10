@@ -9,7 +9,7 @@ public class dishDatabase implements IdishDatabase {
     private ArrayList<IDish> dishes;
 
     public dishDatabase() {
-        dishes = null;
+        dishes = new ArrayList<IDish>();
     }
 
     public void addDish(IDish dish) {
