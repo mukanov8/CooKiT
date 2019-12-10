@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:background="#E6E6E6"
+    android:orientation="vertical">
 
     <TextView
-    android:id="@+id/faxian"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="发现"
-    android:textColor="@color/theme"
-    android:textSize="23sp" />
+        android:id="@+id/fragment_meanu_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Menu"
+        android:textSize="50sp"
+        android:background="#E6E6E6"
+        android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/Buttomfaxian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="button"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#888888"
+        />
+
+    <ListView
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:background="#E6E6E6"
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:divider="#E6E6E6"
+        android:dividerHeight="10dp"
+        />
 
 </LinearLayout>
