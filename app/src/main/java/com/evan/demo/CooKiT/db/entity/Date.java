@@ -12,7 +12,7 @@ public class Date implements IDate {
     private ArrayList<IDish> dishes;
     private Double expenditure;
 
-    private static String[] weekDays = {"Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday", "Sunday"};
+    private static String[] weekDays = {"Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday"};
 
     private static String toStringWeekDay(Integer day) {
         day--;
@@ -20,20 +20,24 @@ public class Date implements IDate {
     }
 
     public Date () {
-        dishes = new ArrayList<IDish>();
+        dishes = new ArrayList<>();
         expenditure = 0.0;
-        weekDay = toStringWeekDay(Calendar.DAY_OF_WEEK);
-        day = Calendar.DAY_OF_MONTH;
-        month = Calendar.MONTH;
-        year = Calendar.YEAR;
+        Calendar today = Calendar.getInstance();
+        weekDay = toStringWeekDay(today.get(Calendar.DAY_OF_WEEK));
+        day = today.get(Calendar.DAY_OF_MONTH);
+        month = today.get(Calendar.MONTH) + 1;
+        year = today.get(Calendar.YEAR);
     }
 
     public Date (ArrayList<IDish> dishes, Double expenditure, Integer day, Integer month, Integer year) {
         this.dishes = dishes;
         this.expenditure = expenditure;
-
+        Calendar today = Calendar.getInstance();
         // implement auto weekDay recognition
-        weekDay = toStringWeekDay(Calendar.DAY_OF_WEEK);
+        today.set(Calendar.DAY_OF_MONTH, day);
+        today.set(Calendar.MONTH, month - 1);
+        today.set(Calendar.YEAR, year);
+        weekDay = toStringWeekDay(today.get(Calendar.DAY_OF_WEEK));
         this.day = day;
         this.month = month;
         this.year = year;
