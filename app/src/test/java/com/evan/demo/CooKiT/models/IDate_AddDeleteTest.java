@@ -14,6 +14,19 @@ public class IDate_AddDeleteTest {
     private IDish testDish2 = new Dish("test3", 40.0, "test_ingredients3");
     private IDish testDish3 = new Dish("test4", 19999.0, "test_ingredients4");
     private ArrayList<IDish> actualDishList = new ArrayList<>();
+
+    @Test
+    public void getExp() {
+        IDate testDate = new Date();
+
+        testDate.addDish(testDish1);
+        testDate.addDish(testDish2);
+        testDate.addDish(testDish3);
+
+        Double actualExpenditure = testDish1.getPrice() + testDish2.getPrice() + testDish3.getPrice();
+        assertEquals(testDate.getExp(), actualExpenditure);
+    }
+
     @Test
     public void addDish() {
         IDate testDate = new Date();

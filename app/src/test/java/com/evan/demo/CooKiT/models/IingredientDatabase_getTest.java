@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class IingredientDatabase_getIngTest {
+public class IingredientDatabase_getTest {
 
     @Test
     public void getIngredient() {
