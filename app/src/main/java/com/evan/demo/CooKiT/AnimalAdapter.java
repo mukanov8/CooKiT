@@ -10,14 +10,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.evan.demo.CooKiT.db.entity.Dish;
+import com.evan.demo.CooKiT.models.IDish;
+
 import java.util.ArrayList;
 
 public class AnimalAdapter extends BaseAdapter {
 
-    private ArrayList<Animal> animalList;
+    private ArrayList<IDish> animalList;
     private Context mcontent;
 
-    public AnimalAdapter(ArrayList<Animal> animalList,Context content){
+    public AnimalAdapter(ArrayList<IDish> animalList, Context content){
         this.animalList = animalList;
         mcontent = content;
     }

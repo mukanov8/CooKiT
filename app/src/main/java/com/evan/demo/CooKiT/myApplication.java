@@ -2,29 +2,43 @@ package com.evan.demo.CooKiT;
 
 import android.app.Application;
 
+import com.evan.demo.CooKiT.db.DataBase;
+import com.evan.demo.CooKiT.db.dishDatabase;
+import com.evan.demo.CooKiT.db.entity.Dish;
+import com.evan.demo.CooKiT.models.IDish;
+import com.evan.demo.CooKiT.models.IdishDatabase;
+
 import java.util.ArrayList;
 
 public class myApplication extends Application {
 
-    private ArrayList<Animal> animalList = new ArrayList<>();
+    private ArrayList<IDish> animalList = new ArrayList<>();
 
     private String editContent;
 
+    private IdishDatabase idishDatabase;
+
     public myApplication(){
-        animalList.add(new Animal("Steak"));
-        animalList.add(new Animal("Soup"));
-        animalList.add(new Animal("Chiken"));
-        animalList.add(new Animal("Eggs"));
-        animalList.add(new Animal("Pilaf"));
-        animalList.add(new Animal("Toasts"));
-        animalList.add(new Animal("Sanwitch"));
-        animalList.add(new Animal("Pizza"));
+//        animalList.add(new Animal("Steak"));
+//        animalList.add(new Animal("Soup"));
+//        animalList.add(new Animal("Chiken"));
+//        animalList.add(new Animal("Eggs"));
+//        animalList.add(new Animal("Pilaf"));
+//        animalList.add(new Animal("Toasts"));
+//        animalList.add(new Animal("Sanwitch"));
+//        animalList.add(new Animal("Pizza"));
+
+        editContent = new String("origin text");
+
+        idishDatabase = new dishDatabase();
+
+        idishDatabase.addDish(new Dish("Steak",0.0,null));
+        idishDatabase.addDish(new Dish("meat",1.0,null));
 
 
-        editContent = new String("初始文字");
     }
 
-    public ArrayList<Animal> getAnimalList() {
+    public ArrayList<IDish> getAnimalList() {
         return animalList;
     }
 

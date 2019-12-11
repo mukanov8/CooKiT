@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.evan.demo.CooKiT.models.IDish;
+
 import java.util.ArrayList;
 
 
@@ -20,7 +22,7 @@ public class DishStockFragment extends ListFragment {
 
     private AnimalAdapter madapter;
 
-    private ArrayList<Animal> animalList;
+    private ArrayList<IDish> animalList;
 
     private TextView mtv;
 

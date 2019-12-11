@@ -33,6 +33,7 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
         met2 = view.findViewById(R.id.dish_item_price);
         met3 = view.findViewById(R.id.dish_item_name);
         mbt = view.findViewById(R.id.dish_item_confirm);
+        mtv = view.findViewById(R.id.dish_item_title);
         mbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +50,9 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
         Bundle bundle = getArguments();
         if(bundle != null){
             met1.setText(bundle.getString("name"));
+        }
+        else {
+            mtv.setText("New Dish");
         }
 
     }
