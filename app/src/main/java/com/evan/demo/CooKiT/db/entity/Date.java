@@ -61,8 +61,10 @@ public class Date implements IDate {
 
     public void addDish(IDish dish) {
         dishes.add(dish);
+        expenditure += dish.getPrice();
     }
     public void deleteDish(IDish dish) {
-        dishes.remove(dish);
+        if (dishes.remove(dish))
+            expenditure -= dish.getPrice();
     }
 }
