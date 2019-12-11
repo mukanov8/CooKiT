@@ -20,40 +20,72 @@
         android:background="#888888"
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
-        android:orientation="vertical">
+        android:layout_weight="7">
 
-        <TextView
-            android:layout_margin="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ingredients"
-            android:textSize="30sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_marginLeft="30dp"
-            android:id="@+id/dish_item_ingredients"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            <TextView
+                android:layout_margin="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textSize="30sp"/>
 
-        <TextView
-            android:layout_margin="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="price"
-            android:textSize="30sp"/>
+            <EditText
+                android:layout_marginLeft="30dp"
+                android:id="@+id/dish_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
 
-        <EditText
-            android:layout_marginLeft="30dp"
-            android:id="@+id/dish_item_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_margin="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ingredients"
+                android:textSize="30sp"/>
 
-    </LinearLayout>
+            <EditText
+                android:layout_marginLeft="30dp"
+                android:id="@+id/dish_item_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_margin="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="price"
+                android:textSize="30sp"/>
+
+            <EditText
+                android:layout_marginLeft="30dp"
+                android:id="@+id/dish_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/dish_item_confirm"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_circle"
+            android:text="confirm"/>
+
+    </RelativeLayout>
+
+
 
 
 

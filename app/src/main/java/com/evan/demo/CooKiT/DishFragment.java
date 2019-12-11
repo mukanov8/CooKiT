@@ -8,14 +8,21 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.evan.demo.CooKiT.db.entity.Dish;
 
 
 public class DishFragment extends Fragment implements View.OnTouchListener {
 
-    private EditText met1,met2;
+    private EditText met1,met2,met3;
+
+    private Button mbt;
+
+    private TextView mtv;
 
 
     @Nullable
@@ -24,6 +31,15 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
         View view = inflater.inflate(R.layout.dish_item,null);
         met1 = view.findViewById(R.id.dish_item_ingredients);
         met2 = view.findViewById(R.id.dish_item_price);
+        met3 = view.findViewById(R.id.dish_item_name);
+        mbt = view.findViewById(R.id.dish_item_confirm);
+        mbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(),"successful!",Toast.LENGTH_SHORT).show();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(DishFragment.this).commitAllowingStateLoss();
+            }
+        });
         return view;
     }
 
@@ -31,7 +47,10 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Bundle bundle = getArguments();
-        met1.setText(bundle.getString("name"));
+        if(bundle != null){
+            met1.setText(bundle.getString("name"));
+        }
+
     }
 
     @Override

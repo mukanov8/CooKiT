@@ -6,6 +6,7 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,8 @@ public class MenuFragment extends ListFragment {
 
     private TextView mtv;
 
+    private Button mbt;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +41,17 @@ public class MenuFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         setListAdapter(madapter);
-        return inflater.inflate(R.layout.fragment_menu,null);
+        View view = inflater.inflate(R.layout.fragment_menu,null);
+        mbt = view.findViewById(R.id.fragment_meanu_add);
+
+        mbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).add(R.id.ll_frameLayout,new DishFragment(),null).commitAllowingStateLoss();
+            }
+        });
+
+        return view;
     }
 
 
