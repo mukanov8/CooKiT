@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class myApplication extends Application {
 
-    private ArrayList<IDish> animalList = new ArrayList<>();
+    //private ArrayList<IDish> animalList = new ArrayList<>();
 
     private String editContent;
 
@@ -32,14 +32,12 @@ public class myApplication extends Application {
 
         idishDatabase = new dishDatabase();
 
-        idishDatabase.addDish(new Dish("Steak",0.0,null));
-        idishDatabase.addDish(new Dish("meat",1.0,null));
-
-
+        idishDatabase.addDish((new Dish("Steak",0.0,null)));
+        idishDatabase.addDish((new Dish("meat",1.0,null)));
     }
 
     public ArrayList<IDish> getAnimalList() {
-        return animalList;
+        return idishDatabase.getListOfDishes();
     }
 
     public String getEditContent() {
