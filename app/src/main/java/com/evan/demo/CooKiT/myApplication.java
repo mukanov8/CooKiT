@@ -16,7 +16,7 @@ public class myApplication extends Application {
 
     private String editContent;
 
-    private IdishDatabase idishDatabase;
+    public IdishDatabase idishDatabase;
 
     public myApplication(){
 //        animalList.add(new Animal("Steak"));
@@ -30,19 +30,14 @@ public class myApplication extends Application {
 
         editContent = new String("origin text");
 
+
         idishDatabase = new dishDatabase();
-
-        idishDatabase.addDish((new Dish("Steak",0.0,null)));
-        idishDatabase.addDish((new Dish("meat",1.0,null)));
+        idishDatabase.addDish((new Dish("Steak",10.0,"orangle")));
+        idishDatabase.addDish((new Dish("meat",1.0,"meat")));
     }
 
-    public ArrayList<IDish> getAnimalList() {
-        return idishDatabase.getListOfDishes();
-    }
 
-    public void addDishToDishStock(IDish dish){
-        idishDatabase.addDish(dish);
-    }
+
 
     public String getEditContent() {
         return editContent;

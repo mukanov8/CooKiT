@@ -21,7 +21,7 @@ public class MenuFragment extends ListFragment {
 
     private AnimalAdapter madapter;
 
-    private ArrayList<IDish> animalList;
+    private ArrayList<IDish> DishList;
 
     private TextView mtv;
 
@@ -33,9 +33,9 @@ public class MenuFragment extends ListFragment {
 
         myApplication database = (myApplication)getActivity().getApplicationContext();
 
-        animalList = database.getAnimalList();
+        DishList = database.idishDatabase.getListOfDishes();
 
-        madapter = new AnimalAdapter(animalList,getActivity());
+        madapter = new AnimalAdapter(DishList,getActivity());
 
     }
 
@@ -61,11 +61,11 @@ public class MenuFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Bundle bundle = new Bundle();
-        bundle.putString("name",animalList.get(position).getName());
+        bundle.putString("name",DishList.get(position).getName());
         bundle.putInt("position",position);
         DishFragment dishFragment = new DishFragment();
         dishFragment.setArguments(bundle);
         getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).add(R.id.ll_frameLayout,dishFragment,null).commitAllowingStateLoss();
-        Toast.makeText(getActivity(),animalList.get(position).getName(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(),DishList.get(position).getName(),Toast.LENGTH_SHORT).show();
     }
 }

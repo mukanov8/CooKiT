@@ -44,27 +44,22 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
         super.onActivityCreated(savedInstanceState);
         Bundle bundle = getArguments();
 
+
         mbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 myApplication database = (myApplication)getActivity().getApplicationContext();
 
-                if(getArguments()!= null) {
-                    database.getAnimalList().get(getArguments().getInt("position")).setName(met3.getText().toString());
-                    database.getAnimalList().get(getArguments().getInt("position")).setIngredients(met1.getText().toString());
-                    Double doubleString = Double.parseDouble(met2.getText().toString());
-                    database.getAnimalList().get(getArguments().getInt("position")).setPrice(doubleString);
-                }
-                else{
-                    Double doubleString = Double.parseDouble(met2.getText().toString());
-                    database.addDishToDishStock(new Dish(met3.getText().toString(),doubleString,met1.getText().toString()));
-                }
+                if(getArguments()!= null)
+                    database.idishDatabase.deleteDish(getArguments().getString("name"));
 
-
+                    Double doubleString = Double.parseDouble(met2.getText().toString());
+                    database.idishDatabase.addDish(new Dish(met3.getText().toString(),doubleString,met1.getText().toString()));
 
 
                 Toast.makeText(getActivity(),"successful!",Toast.LENGTH_SHORT).show();
+
                 getActivity().getSupportFragmentManager().beginTransaction().remove(DishFragment.this).commitAllowingStateLoss();
             }
         });
