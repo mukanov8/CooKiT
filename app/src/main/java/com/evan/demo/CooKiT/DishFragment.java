@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.evan.demo.CooKiT.db.entity.Dish;
+import com.evan.demo.CooKiT.models.IDish;
 
 
 public class DishFragment extends Fragment implements View.OnTouchListener {
@@ -34,13 +35,7 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
         met3 = view.findViewById(R.id.dish_item_name);
         mbt = view.findViewById(R.id.dish_item_confirm);
         mtv = view.findViewById(R.id.dish_item_title);
-        mbt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(),"successful!",Toast.LENGTH_SHORT).show();
-                getActivity().getSupportFragmentManager().beginTransaction().remove(DishFragment.this).commitAllowingStateLoss();
-            }
-        });
+
         return view;
     }
 
@@ -48,8 +43,35 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Bundle bundle = getArguments();
+
+        mbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                myApplication database = (myApplication)getActivity().getApplicationContext();
+
+                if(getArguments()!= null) {
+                    database.getAnimalList().get(getArguments().getInt("position")).setName(met3.getText().toString());
+                    database.getAnimalList().get(getArguments().getInt("position")).setIngredients(met1.getText().toString());
+                    Double doubleString = Double.parseDouble(met2.getText().toString());
+                    database.getAnimalList().get(getArguments().getInt("position")).setPrice(doubleString);
+                }
+                else{
+                    Double doubleString = Double.parseDouble(met2.getText().toString());
+                    database.addDishToDishStock(new Dish(met3.getText().toString(),doubleString,met1.getText().toString()));
+                }
+
+
+
+
+                Toast.makeText(getActivity(),"successful!",Toast.LENGTH_SHORT).show();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(DishFragment.this).commitAllowingStateLoss();
+            }
+        });
+
+
         if(bundle != null){
-            met1.setText(bundle.getString("name"));
+            mtv.setText(bundle.getString("name"));
         }
         else {
             mtv.setText("New Dish");

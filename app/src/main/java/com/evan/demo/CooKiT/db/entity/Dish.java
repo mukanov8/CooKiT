@@ -66,4 +66,8 @@ public class Dish implements IDish {
     public Double getPrice() {
         return totalPrice;
     }
+
+    public void setPrice(Double price){
+        this.totalPrice = price;
+    }
 }

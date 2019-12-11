@@ -56,11 +56,13 @@ public class MenuFragment extends ListFragment {
     }
 
 
+
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Bundle bundle = new Bundle();
         bundle.putString("name",animalList.get(position).getName());
+        bundle.putInt("position",position);
         DishFragment dishFragment = new DishFragment();
         dishFragment.setArguments(bundle);
         getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).add(R.id.ll_frameLayout,dishFragment,null).commitAllowingStateLoss();

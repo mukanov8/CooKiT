@@ -15,4 +15,7 @@ public interface IDish {
     String getIngredients();
     void setIngredients(String list);
     Double getPrice();
+    void setPrice(Double price);
+
+
 }

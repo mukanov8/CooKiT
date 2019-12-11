@@ -40,6 +40,10 @@ public class myApplication extends Application {
         return idishDatabase.getListOfDishes();
     }
 
+    public void addDishToDishStock(IDish dish){
+        idishDatabase.addDish(dish);
+    }
+
     public String getEditContent() {
         return editContent;
     }
