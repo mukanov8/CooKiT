@@ -62,9 +62,6 @@ public class AnimalAdapter extends BaseAdapter {
                 AnimalAdapter.this.notifyDataSetChanged();
             }
         });
-
-
-
         return view;
     }
 
