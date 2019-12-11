@@ -32,7 +32,7 @@ public class DataBase implements IDataBase {
             }
         }
         if (selected.equals(Boolean.TRUE)) return;
-        today = new Date();
+        today = new Date(null, 0.0, day, month, year);
         dates.add(today);
     }
 
@@ -48,5 +48,8 @@ public class DataBase implements IDataBase {
         dates.add(day);
     }
 
+    public ArrayList<IDate> getDates() {
+        return this.dates;
+    }
 
 }
