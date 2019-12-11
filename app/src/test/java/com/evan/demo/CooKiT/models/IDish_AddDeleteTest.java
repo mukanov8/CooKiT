@@ -7,10 +7,10 @@ import static org.junit.Assert.*;
 public class IDish_AddDeleteTest {
 
     @Test
-    public void addIngredient() {
+    public void setIngredients() {
     }
 
     @Test
-    public void deleteIngredient() {
+    public void getIngredients() {
     }
 }
