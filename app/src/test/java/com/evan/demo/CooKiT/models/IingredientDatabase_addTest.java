@@ -11,8 +11,8 @@ import static org.junit.Assert.*;
 
 public class IingredientDatabase_addTest {
     private IIngredient testIng1 = new Ingredient("testIng1", 100.0, 500.0);
-    private IIngredient testIng2 = new Ingredient("testIng1", 20.0, 1000.0);
-    private IIngredient testIng3 = new Ingredient("testIng1", 1.0, 200000.0);
+    private IIngredient testIng2 = new Ingredient("testIng2", 20.0, 1000.0);
+    private IIngredient testIng3 = new Ingredient("testIng3", 1.0, 200000.0);
 
     private ArrayList<IIngredient> actualData;
     @Test
