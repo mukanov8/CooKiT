@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.evan.demo.CooKiT.models.IDish;
 
-public interface IdishDatabase {
+public interface IDishStock {
     void addDish(IDish dish);
     void deleteDish(String name);
     IDish getDish(String name);

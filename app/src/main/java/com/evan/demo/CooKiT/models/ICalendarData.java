@@ -6,7 +6,7 @@ import com.evan.demo.CooKiT.models.IDate;
 
 import java.util.ArrayList;
 
-public interface IDataBase {
+public interface ICalendarData {
     IDate getToday();
     void selectDate(Integer day, Integer month, Integer year);
     void updateDateDish(IDate date, IDish dish);

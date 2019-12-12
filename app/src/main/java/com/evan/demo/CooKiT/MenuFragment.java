@@ -33,7 +33,7 @@ public class MenuFragment extends ListFragment {
 
         myApplication database = (myApplication)getActivity().getApplicationContext();
 
-        DishList = database.idishDatabase.getListOfDishes();
+        DishList = database.IDishStock.getListOfDishes();
 
         madapter = new AnimalAdapter(DishList,getActivity());
 

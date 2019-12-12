@@ -1,13 +1,13 @@
 package com.evan.demo.CooKiT.models;
 
 import com.evan.demo.CooKiT.db.entity.Ingredient;
-import com.evan.demo.CooKiT.db.ingredientDatabase;
+import com.evan.demo.CooKiT.db.IngredientStock;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class IingredientDatabase_ReduceTest {
+public class IIngredientStock_ReduceTest {
 
     private IIngredient testIng1 = new Ingredient("testIng10", 10000.0, 50000.0);
     private IIngredient testIng2 = new Ingredient("testIng11", 1.0, 100.0);
@@ -16,7 +16,7 @@ public class IingredientDatabase_ReduceTest {
 
     @Test
     public void reduceIngredient() {
-        IingredientDatabase forTest = new ingredientDatabase();
+        IIngredientStock forTest = new IngredientStock();
         forTest.addIngredients(testIng1.getName(), testIng1.getQuantity(), testIng1.getPrice());
         forTest.addIngredients(testIng2.getName(), testIng2.getQuantity(), testIng2.getPrice());
         forTest.addIngredients(testIng3.getName(), testIng3.getQuantity(), testIng3.getPrice());

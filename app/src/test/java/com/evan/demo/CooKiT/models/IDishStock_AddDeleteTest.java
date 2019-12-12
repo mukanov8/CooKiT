@@ -1,6 +1,6 @@
 package com.evan.demo.CooKiT.models;
 
-import com.evan.demo.CooKiT.db.dishDatabase;
+import com.evan.demo.CooKiT.db.DishStock;
 import com.evan.demo.CooKiT.db.entity.Dish;
 
 import org.junit.Test;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class IdishDatabase_AddDeleteTest {
+public class IDishStock_AddDeleteTest {
     private IDish testDish1 = new Dish("test7", 0.0, "test_ingredients7");
     private IDish testDish2 = new Dish("test8", 12.0, "test_ingredients8");
     private IDish testDish3 = new Dish("test9", 3214132.0, "test_ingredients9");
@@ -17,7 +17,7 @@ public class IdishDatabase_AddDeleteTest {
 
     @Test
     public void addDish() {
-        IdishDatabase testDishDataBase = new dishDatabase();
+        IDishStock testDishDataBase = new DishStock();
 
         testDishDataBase.addDish(testDish1);
         actualDishList.add(testDish1);
@@ -56,7 +56,7 @@ public class IdishDatabase_AddDeleteTest {
 
     @Test
     public void deleteDish() {
-        IdishDatabase testDishDataBase = new dishDatabase();
+        IDishStock testDishDataBase = new DishStock();
 
         testDishDataBase.addDish(testDish1);
         actualDishList.add(testDish1);

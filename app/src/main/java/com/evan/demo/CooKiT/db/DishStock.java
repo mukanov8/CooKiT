@@ -1,14 +1,14 @@
 package com.evan.demo.CooKiT.db;
 
 import com.evan.demo.CooKiT.models.IDish;
-import com.evan.demo.CooKiT.models.IdishDatabase;
+import com.evan.demo.CooKiT.models.IDishStock;
 
 import java.util.ArrayList;
 
-public class dishDatabase implements IdishDatabase {
+public class DishStock implements IDishStock {
     private ArrayList<IDish> dishes;
 
-    public dishDatabase() {
+    public DishStock() {
         dishes = new ArrayList<IDish>();
     }
 

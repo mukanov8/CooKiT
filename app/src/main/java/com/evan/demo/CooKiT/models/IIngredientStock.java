@@ -4,7 +4,7 @@ import com.evan.demo.CooKiT.models.IIngredient;
 
 import java.util.ArrayList;
 
-public interface IingredientDatabase {
+public interface IIngredientStock {
     void addIngredients(String name, Double quantity, Double price);
     void reduceIngredient(String name, Double quantity);
     IIngredient getIngredient(String name);

@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.evan.demo.CooKiT.db.entity.Dish;
-import com.evan.demo.CooKiT.models.IDish;
 
 
 public class DishFragment extends Fragment implements View.OnTouchListener {
@@ -52,10 +51,10 @@ public class DishFragment extends Fragment implements View.OnTouchListener {
                 myApplication database = (myApplication)getActivity().getApplicationContext();
 
                 if(getArguments()!= null)
-                    database.idishDatabase.deleteDish(getArguments().getString("name"));
+                    database.IDishStock.deleteDish(getArguments().getString("name"));
 
                     Double doubleString = Double.parseDouble(met2.getText().toString());
-                    database.idishDatabase.addDish(new Dish(met3.getText().toString(),doubleString,met1.getText().toString()));
+                    database.IDishStock.addDish(new Dish(met3.getText().toString(),doubleString,met1.getText().toString()));
 
 
                 Toast.makeText(getActivity(),"successful!",Toast.LENGTH_SHORT).show();

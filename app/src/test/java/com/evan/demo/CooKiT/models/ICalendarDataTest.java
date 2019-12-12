@@ -1,6 +1,6 @@
 package com.evan.demo.CooKiT.models;
 
-import com.evan.demo.CooKiT.db.DataBase;
+import com.evan.demo.CooKiT.db.CalendarCalendarData;
 import com.evan.demo.CooKiT.db.entity.Date;
 import com.evan.demo.CooKiT.db.entity.Dish;
 
@@ -11,10 +11,9 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.text.SimpleDateFormat;
 import java.util.Random;
 
-public class IDataBaseTest {
+public class ICalendarDataTest {
     private ArrayList<IDate> actualDates = new ArrayList<>();
 
     private static String packDate(Integer day, Integer month, Integer year) {
@@ -24,7 +23,7 @@ public class IDataBaseTest {
 
     @Test
     public void getToday() {
-        IDataBase forTest = new DataBase();
+        ICalendarData forTest = new CalendarCalendarData();
         Calendar today = Calendar.getInstance();
         String dateName = packDate(today.get(Calendar.DAY_OF_MONTH), today.get(Calendar.MONTH), today.get(Calendar.YEAR));
         assertEquals(forTest.getToday().getDateName(), dateName);
@@ -32,7 +31,7 @@ public class IDataBaseTest {
 
     @Test
     public void selectDate() {
-        IDataBase forTest = new DataBase();
+        ICalendarData forTest = new CalendarCalendarData();
         Calendar today = Calendar.getInstance();
         Random generator = new Random();
 
@@ -47,7 +46,7 @@ public class IDataBaseTest {
 
     @Test
     public void updateDateDish() {
-        IDataBase forTest = new DataBase();
+        ICalendarData forTest = new CalendarCalendarData();
         IDish testDish = new Dish("test1", 0.0, "test_ingredients1");
         forTest.updateDateDish(forTest.getToday(), testDish);
         IDate testDate = new Date();

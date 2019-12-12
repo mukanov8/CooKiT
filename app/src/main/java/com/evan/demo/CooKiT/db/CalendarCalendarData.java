@@ -1,17 +1,17 @@
 package com.evan.demo.CooKiT.db;
 
 import com.evan.demo.CooKiT.db.entity.Date;
-import com.evan.demo.CooKiT.models.IDataBase;
+import com.evan.demo.CooKiT.models.ICalendarData;
 import com.evan.demo.CooKiT.models.IDate;
 import com.evan.demo.CooKiT.models.IDish;
 
 import java.util.ArrayList;
 
-public class DataBase implements IDataBase {
+public class CalendarCalendarData implements ICalendarData {
     private IDate today;
     private ArrayList<IDate> dates;
 
-    public DataBase() {
+    public CalendarCalendarData() {
         today = new Date();
         dates = new ArrayList<IDate>();
         dates.add(today);

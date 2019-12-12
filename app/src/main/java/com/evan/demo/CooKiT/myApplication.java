@@ -2,13 +2,9 @@ package com.evan.demo.CooKiT;
 
 import android.app.Application;
 
-import com.evan.demo.CooKiT.db.DataBase;
-import com.evan.demo.CooKiT.db.dishDatabase;
+import com.evan.demo.CooKiT.db.DishStock;
 import com.evan.demo.CooKiT.db.entity.Dish;
-import com.evan.demo.CooKiT.models.IDish;
-import com.evan.demo.CooKiT.models.IdishDatabase;
-
-import java.util.ArrayList;
+import com.evan.demo.CooKiT.models.IDishStock;
 
 public class myApplication extends Application {
 
@@ -16,7 +12,7 @@ public class myApplication extends Application {
 
     private String editContent;
 
-    public IdishDatabase idishDatabase;
+    public IDishStock IDishStock;
 
     public myApplication(){
 //        animalList.add(new Animal("Steak"));
@@ -31,9 +27,9 @@ public class myApplication extends Application {
         editContent = new String("origin text");
 
 
-        idishDatabase = new dishDatabase();
-        idishDatabase.addDish((new Dish("Steak",10.0,"orangle")));
-        idishDatabase.addDish((new Dish("meat",1.0,"meat")));
+        IDishStock = new DishStock();
+        IDishStock.addDish((new Dish("Steak",10.0,"orangle")));
+        IDishStock.addDish((new Dish("meat",1.0,"meat")));
     }
 
 

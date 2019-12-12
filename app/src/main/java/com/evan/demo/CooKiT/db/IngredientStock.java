@@ -2,13 +2,13 @@ package com.evan.demo.CooKiT.db;
 
 import com.evan.demo.CooKiT.db.entity.Ingredient;
 import com.evan.demo.CooKiT.models.IIngredient;
-import com.evan.demo.CooKiT.models.IingredientDatabase;
+import com.evan.demo.CooKiT.models.IIngredientStock;
 
 import java.util.ArrayList;
 
-public class ingredientDatabase implements IingredientDatabase {
+public class IngredientStock implements IIngredientStock {
     private ArrayList<IIngredient> Ingredients;
-    public ingredientDatabase() {
+    public IngredientStock() {
         Ingredients = new ArrayList<IIngredient> ();
     }
 

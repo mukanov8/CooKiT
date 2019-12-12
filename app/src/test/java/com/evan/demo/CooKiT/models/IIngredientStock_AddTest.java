@@ -1,7 +1,7 @@
 package com.evan.demo.CooKiT.models;
 
 import com.evan.demo.CooKiT.db.entity.Ingredient;
-import com.evan.demo.CooKiT.db.ingredientDatabase;
+import com.evan.demo.CooKiT.db.IngredientStock;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class IingredientDatabase_addTest {
+public class IIngredientStock_AddTest {
     private IIngredient testIng1 = new Ingredient("testIng1", 100.0, 500.0);
     private IIngredient testIng2 = new Ingredient("testIng2", 20.0, 1000.0);
     private IIngredient testIng3 = new Ingredient("testIng3", 1.0, 200000.0);
@@ -17,7 +17,7 @@ public class IingredientDatabase_addTest {
     private ArrayList<IIngredient> actualData;
     @Test
     public void addIngredients() {
-        IingredientDatabase forTest = new ingredientDatabase();
+        IIngredientStock forTest = new IngredientStock();
 
         forTest.addIngredients(testIng1.getName(), testIng1.getQuantity(), testIng1.getPrice());
         actualData.add(testIng1);
