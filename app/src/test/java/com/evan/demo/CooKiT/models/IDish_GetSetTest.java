@@ -19,7 +19,8 @@ public class IDish_GetSetTest {
     @Test
     public void setIngredients() {
         IDish testDish = new Dish("test6", 4000.0, "test_ingredients6");
-        assertEquals(testDish.getIngredients(), "test_ingredients6");
+        testDish.setIngredients("test_ingredients7");
+        assertEquals(testDish.getIngredients(), "test_ingredients7");
         assertEquals(testDish.getPrice(), 4000.0, 0.0);
     }
 }

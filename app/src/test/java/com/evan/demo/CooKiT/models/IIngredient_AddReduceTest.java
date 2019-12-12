@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class IIngredientStock_AddReduceTest {
+public class IIngredient_AddReduceTest {
 
     @Test
     public void addQuantity() {
