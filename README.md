@@ -2,7 +2,7 @@
 
 A simple Android cooking scheduler/timetable application
 
-![Logo](./cookit-logo2.png)
+![Logo](./cookit-logo.png)
 
 
 ## Description
