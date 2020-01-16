@@ -1,5 +1,7 @@
-# CookiT
+## CookiT
+
 A simple Android cooking scheduler/timetable application
+
 ![Logo](./cookit-logo.png)
 
 
@@ -11,6 +13,9 @@ It's an application for scheduling(i.e. timetable) cooking designed to help univ
 
 ## Demo
 
+![DemoSlides](./Presentation_slide1.png)
+![DemoSlides](./Presentation_slide2.png)
+![DemoSlides](./Presentation_slide3.png)
 
 ## Contributors
 - [Ayan Mukanov](https://github.com/mukanov8)
