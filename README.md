@@ -13,6 +13,7 @@ It's an application for scheduling(i.e. timetable) cooking designed to help univ
 ![DemoSlides](./Presentation_slide1.png)
 ![DemoSlides](./Presentation_slide2.png)
 ![DemoSlides](./Presentation_slide3.png)
+![DemoSlides](./Presentation_slide4.png)
 
 ## Contributors
 - [Ayan Mukanov](https://github.com/mukanov8)
