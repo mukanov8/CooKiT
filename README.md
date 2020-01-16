@@ -2,6 +2,7 @@
 A simple Android cooking scheduler/timetable application
 ![Logo](./cookit-logo.png)
 
+
 ## Description
 
 CookiT is a course project for CS350: Introduction to Software Engineering @ KAIST, School of Computing.
